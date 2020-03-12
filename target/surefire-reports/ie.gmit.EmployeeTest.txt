@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: ie.gmit.EmployeeTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.091 s <<< FAILURE! - in ie.gmit.EmployeeTest
+ie.gmit.EmployeeTest.testingInvalidPhone  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at ie.gmit.EmployeeTest.testingInvalidPhone(EmployeeTest.java:77)
+
+ie.gmit.EmployeeTest.testingInvalidName  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at ie.gmit.EmployeeTest.testingInvalidName(EmployeeTest.java:45)
+
+ie.gmit.EmployeeTest.testingInvalidAge  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at ie.gmit.EmployeeTest.testingInvalidAge(EmployeeTest.java:67)
+
+ie.gmit.EmployeeTest.testingInvalidEmploymentType  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at ie.gmit.EmployeeTest.testingInvalidEmploymentType(EmployeeTest.java:56)
+

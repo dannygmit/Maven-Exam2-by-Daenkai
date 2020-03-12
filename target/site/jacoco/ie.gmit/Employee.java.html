@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MavenExam2_Daenkai</a> &gt; <a href="index.source.html" class="el_package">ie.gmit</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">package ie.gmit;
+
+public class Employee {
+
+<span class="fc" id="L5">    private String name = &quot;&quot;;</span>
+<span class="fc" id="L6">    private String employmentType = &quot;&quot;;</span>
+<span class="fc" id="L7">    private String ppsNumber = &quot;&quot;;</span>
+<span class="fc" id="L8">    private long phone = 0;</span>
+<span class="fc" id="L9">    private int age = 0;</span>
+<span class="fc" id="L10">    private String title = &quot;&quot;;</span>
+
+    //Constructor
+<span class="fc" id="L13">    public Employee(String title, String name, String employmentType, String ppsNumber, long phone, int age) {</span>
+<span class="fc" id="L14">        this.title = title;</span>
+<span class="fc" id="L15">        this.name = name;</span>
+<span class="fc" id="L16">        this.employmentType = employmentType;</span>
+<span class="fc" id="L17">        this.ppsNumber = ppsNumber;</span>
+<span class="fc" id="L18">        this.phone = phone;</span>
+<span class="fc" id="L19">        this.age = age;</span>
+<span class="fc" id="L20">    }</span>
+
+    // Getters and Setters
+    public String getName() {
+<span class="fc" id="L24">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc bnc" id="L28" title="All 4 branches missed.">        if(name.length() &lt; 5 || name.length() &gt; 22)</span>
+<span class="nc" id="L29">            throw new IllegalArgumentException(&quot;Name must have minimum of 5 characters and maximum of 22 characters&quot;);</span>
+        else
+<span class="nc" id="L31">            this.name = name;</span>
+<span class="nc" id="L32">    }</span>
+
+    public String getEmploymentType() {
+<span class="fc" id="L35">        return  employmentType;</span>
+
+    }
+
+    public void setEmploymentType(String employmentType) {
+<span class="nc bnc" id="L40" title="All 4 branches missed.">        if(employmentType == &quot;Part-Time&quot; || employmentType == &quot;Full-Time&quot;)</span>
+<span class="nc" id="L41">            this.employmentType = employmentType;</span>
+        else
+<span class="nc" id="L43">            throw new IllegalArgumentException(&quot;Invalid Employment Type&quot;);</span>
+<span class="nc" id="L44">    }</span>
+
+    public String getPpsNumber() {
+<span class="fc" id="L47">        return ppsNumber;</span>
+    }
+
+    public void setPpsNumber(String ppsNumber) {
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        if(ppsNumber.length() &lt; 6)</span>
+<span class="nc" id="L52">            throw new IllegalArgumentException(&quot;Invalid PPS Number, must contain minimum of 6 characters&quot;);</span>
+        else
+<span class="nc" id="L54">            this.ppsNumber = ppsNumber;</span>
+<span class="nc" id="L55">    }</span>
+
+    public long getPhone() {
+<span class="fc" id="L58">        return phone;</span>
+    }
+
+    public void setPhone(long phone) {
+<span class="nc bnc" id="L62" title="All 4 branches missed.">        if(String.valueOf(phone).length() &lt; 7 || String.valueOf(phone).length() &gt; 7)</span>
+<span class="nc" id="L63">            throw new IllegalArgumentException(&quot;Invalid Phone Number, must be a 7 digits&quot;);</span>
+        else
+<span class="nc" id="L65">            this.phone = phone;</span>
+<span class="nc" id="L66">    }</span>
+
+    public int getAge() {
+<span class="fc" id="L69">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if(age &lt; 18)</span>
+<span class="nc" id="L74">            throw new IllegalArgumentException(&quot;Age must be over 18 to work in this company!&quot;);</span>
+        else
+<span class="nc" id="L76">            this.age = age;</span>
+<span class="nc" id="L77">    }</span>
+
+    public String getTitle() {
+
+<span class="fc" id="L81">        return title;</span>
+    }
+
+    public void setTitle(String title) {
+<span class="nc bnc" id="L85" title="All 6 branches missed.">        if(title == &quot;Mr&quot; || title == &quot;Mrs&quot; || title == &quot;Miss&quot;) {</span>
+<span class="nc" id="L86">            this.title = title;</span>
+        }
+        else {
+<span class="nc" id="L89">            throw new IllegalArgumentException(&quot;Invalid Title Provided!&quot;);</span>
+        }
+<span class="nc" id="L91">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
